@@ -1,0 +1,78 @@
+.hidden { display: none; }
+
+/*--------*/
+/* Header */
+/*--------*/
+
+/*------*/
+/* Body */
+/*------*/
+
+html {
+	display: flex;
+	min-height: 100%;
+	flex-flow: column nowrap;
+	justify-content: center;
+}
+
+body { margin: 2rem auto 3rem; }
+@media (orientation: landscape) {
+	body {
+		max-width: 48rem;
+		min-width: 28rem;
+	}
+}
+@media (orientation: portrait) {
+	body {
+		max-width: 28rem;
+		min-width: 16rem;
+	}
+}
+
+/*--------*/
+/* Footer */
+/*--------*/
+
+footer {
+	--s-connection: 2.4rem;
+
+	display: flex;
+	margin-top: 0.8rem;
+}
+@media (orientation: landscape) {
+	footer {
+		padding-right: clamp(4rem, 20vw - 8rem, 6rem);
+		justify-content: flex-end;
+	}
+}
+@media (orientation: portrait) {
+	footer { justify-content: center; }
+}
+
+footer > div {
+	width:  var(--s-connection);
+	height: var(--s-connection);
+}
+@media (orientation: landscape) {
+	footer > div { margin: 0 clamp(0.55rem, 2vw - 0.4rem, 0.85rem); }
+}
+@media (orientation: portrait) {
+	footer > div { margin: 0 clamp(0.35rem, 4vw - 0.4rem, 0.65rem); }
+}
+
+footer svg {
+	width:  var(--s-connection);
+	height: var(--s-connection);
+
+	fill: var(--c-light-d);
+	transition:
+		fill 0.18s ease-out,
+		transform 0.12s ease-out;
+}
+footer svg .background {
+	fill: transparent;
+	transition: fill 0.18s ease-out;
+}
+footer svg:hover { fill: var(--c-accent); }
+footer svg:hover .background { fill: var(--c-light); }
+footer svg:active { transform: scale(130%); }

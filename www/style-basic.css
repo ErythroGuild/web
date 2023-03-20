@@ -1,0 +1,143 @@
+/*----------------------*/
+/* Variable Definitions */
+/*----------------------*/
+
+:root {
+	--c-dark-d:      #2a0300ff;
+	--c-dark-d-a4:   #2a030066;
+	--c-dark-d-a6:   #2a030099;
+	--c-dark-d-a8:   #2a0300cc;
+	--c-dark:        #3e0600ff;
+	--c-dark-a4:     #3e060066;
+	--c-dark-a6:     #3e060099;
+	--c-dark-a8:     #3e0600cc;
+	--c-dark-l:      #5b0d00ff;
+	--c-dark-l-a4:   #5b0d0066;
+	--c-dark-l-a6:   #5b0d0099;
+	--c-dark-l-a8:   #5b0d00cc;
+
+	--c-accent-d:    #a12613ff;
+	--c-accent-d-a4: #a1261366;
+	--c-accent-d-a6: #a1261399;
+	--c-accent-d-a8: #a12613cc;
+	--c-accent:      #da4331ff;
+	--c-accent-a4:   #da433166;
+	--c-accent-a6:   #da433199;
+	--c-accent-a8:   #da4331cc;
+	--c-accent-l:    #f97a72ff;
+	--c-accent-l-a4: #f97a7266;
+	--c-accent-l-a6: #f97a7299;
+	--c-accent-l-a8: #f97a72cc;
+
+	--c-light-d:     #ffb0a6ff;
+	--c-light-d-a4:  #ffb0a666;
+	--c-light-d-a6:  #ffb0a699;
+	--c-light-d-a8:  #ffb0a6cc;
+	--c-light:       #ffcec9ff;
+	--c-light-a4:    #ffcec966;
+	--c-light-a6:    #ffcec999;
+	--c-light-a8:    #ffcec9cc;
+	--c-light-l:     #ffe2deff;
+	--c-light-l-a4:  #ffe2de66;
+	--c-light-l-a6:  #ffe2de99;
+	--c-light-l-a8:  #ffe2decc;
+
+	--f-crimson: 'Crimson Pro', Garamond, serif;
+	--f-rubik:   'Rubik', Helvetica, sans-serif;
+	--f-fira:    'Fira Code', 'Cascadia Code', Consolas, monospace;
+}
+
+/* Styles organized by role, based on MDN's classifications: */
+/* https://developer.mozilla.org/en-US/docs/Web/HTML/Element */
+
+/*--------------------*/
+/* Content Sectioning */
+/*--------------------*/
+
+body {
+	color: var(--c-light);
+	accent-color: var(--c-accent);
+	background-color: var(--c-dark);
+
+	font-family: var(--f-rubik);
+	font-size: 1.15rem;
+}
+
+hr {
+	--s-hr-thickness: 0.12rem;
+
+	height: var(--s-hr-thickness);
+	width: clamp(6rem, 15vw + 4rem, 14rem);
+	border: none;
+	border-radius: calc(var(--s-hr-thickness) / 2);
+
+	background-color: var(--c-light);
+}
+hr.thick { --s-hr-thickness: 0.3rem; }
+
+/*--------------*/
+/* Text Content */
+/*--------------*/
+
+/* pre {
+	background-color: var(--c-gray-l1);
+	border-radius: 0.4em;
+	margin: 0 0.4em;
+	padding: 0.2em 0.4em;
+
+	font-family: var(--f-fira);
+} */
+
+a {
+	/* padding: 0 0.6ex;
+	border-radius: 0.2em; */
+
+	text-decoration: none;
+	color: var(--c-accent);
+	/* transition: background-color 200ms ease-out; */
+}
+a:visited { color: var(--c-accent-d); }
+/* a:hover  { background-color: var(--c-dark-l); }
+a:active { background-color: var(--c-dark-d); } */
+
+/*----------------------*/
+/* Interactive Elements */
+/*----------------------*/
+
+/*-----------------------*/
+/* Inline Text Semantics */
+/*-----------------------*/
+
+/* code {
+	background-color: var(--c-gray-l1);
+	border-radius: 0.2em;
+	margin: 0 0.15em;
+	padding: 0.15em 0.25em;
+
+	font-family: var(--f-fira);
+} */
+
+/*-------------------*/
+/* Demarcating Edits */
+/*-------------------*/
+
+/*----------------------*/
+/* Image and Multimedia */
+/*----------------------*/
+
+/* svg .fill-black  { fill: var(--c-gray-d2); }
+svg .fill-gray   { fill: var(--c-gray-n ); }
+svg .fill-white  { fill: var(--c-gray-l2); }
+svg .fill-accent { fill: var(--c-green-n); }
+svg .stroke-black  { stroke: var(--c-gray-d2); }
+svg .stroke-gray   { stroke: var(--c-gray-n ); }
+svg .stroke-white  { stroke: var(--c-gray-l2); }
+svg .stroke-accent { stroke: var(--c-green-n); } */
+
+/*---------------*/
+/* Table Content */
+/*---------------*/
+
+/*-------*/
+/* Forms */
+/*-------*/

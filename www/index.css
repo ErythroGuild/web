@@ -1,0 +1,98 @@
+@import "style-basic.css" layer(style-basic);
+@import "layout-basic.css" layer(layout-basic);
+
+/* Reduce the main page's max width. */
+/* This is more of a "banner" page.  */
+@media (orientation: landscape) {
+	body { max-width: 38rem; }
+}
+
+/*--------------*/
+/* Intro Splash */
+/*--------------*/
+
+.splash {
+	padding: 0 1.2rem;
+}
+
+.splash > .logo {
+	height: 8rem;
+	width:  8rem;
+}
+
+.intro {
+	--s-cupcake: 3.2rem;
+
+	position: relative;
+	margin: -3.8rem 1.4rem 2.6rem 2.2rem;
+	padding: 0.3rem 1.2rem 0.65rem;
+	border-radius: 0.6rem;
+	
+	background-color: var(--c-dark-d-a8);
+	transition: background-color 0.28s ease-out;
+	
+	font-family: var(--f-rubik);
+	letter-spacing: 0.06ex;
+}
+.intro b {
+	font-family: var(--f-crimson);
+	font-weight: 600;
+	font-size: 1.2em;
+
+	transition: color 1.4s ease-out;
+}
+.intro .nowrap {
+	display: inline-block;
+	white-space: nowrap;
+}
+.intro:hover { background-color: var(--c-dark-d); }
+.intro:hover b { color: var(--c-accent-l); }
+
+.intro .nowrap.cupcake { margin-right: var(--s-cupcake); }
+.intro .cupcake > img {
+	position: absolute;
+	bottom: -1.6rem;
+	right: 0.8rem;
+	height: var(--s-cupcake);
+	width:  var(--s-cupcake);
+
+	transition: transform 0.24s ease-in-out;
+}
+.intro .cupcake > img:hover { transform: scale(160%) rotate(6deg); }
+@media (prefers-reduced-motion) {
+	.intro .cupcake > img:hover { transform: scale(110%); }
+}
+
+/*------------*/
+/* Main Links */
+/*------------*/
+
+main {
+	margin: 3.4rem 0 2.2rem;
+}
+
+main > .page-row {
+	display: flex;
+	margin: 0.8rem 0.2rem;
+	flex-flow: row wrap;
+	justify-content: center;
+	row-gap: 0.6rem;
+}
+
+main .page {
+	margin: 0.2rem 1.2rem;
+
+	font-weight: 600;
+	font-size: 1.4rem;
+}
+main .page a {
+	display: inline-block;
+
+	/* intentionally hiding "visited" color for main page */
+	color: var(--c-accent-l);
+	transition:
+		color 0.14s ease-out,
+		transform 0.14s ease-out;
+}
+main .page a:hover  { color: var(--c-accent); transform: scale(110%); }
+main .page a:active { color: var(--c-light);  transform: scale(115%); }
