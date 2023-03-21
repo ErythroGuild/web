@@ -34,19 +34,13 @@
 	font-family: var(--f-rubik);
 	letter-spacing: 0.06ex;
 }
-.intro b {
-	font-family: var(--f-crimson);
-	font-weight: 600;
-	font-size: 1.2em;
-
-	transition: color 1.4s ease-out;
-}
+.intro b.guild { transition: color 1.4s ease-out; }
 .intro .nowrap {
 	display: inline-block;
 	white-space: nowrap;
 }
 .intro:hover { background-color: var(--c-dark-d); }
-.intro:hover b { color: var(--c-accent-l); }
+.intro:hover b.guild { color: var(--c-accent-l); }
 
 .intro .nowrap.cupcake { margin-right: var(--s-cupcake); }
 .intro .cupcake > img {

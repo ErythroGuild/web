@@ -100,6 +100,12 @@ a:visited { color: var(--c-accent-d); }
 /* a:hover  { background-color: var(--c-dark-l); }
 a:active { background-color: var(--c-dark-d); } */
 
+b.guild {
+	font-family: var(--f-crimson);
+	font-weight: 600;
+	font-size: 1.2em;
+}
+
 /*----------------------*/
 /* Interactive Elements */
 /*----------------------*/
