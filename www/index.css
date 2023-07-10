@@ -89,7 +89,7 @@ main .page a {
 		color 0.14s ease-out,
 		transform 0.14s ease-out;
 }
-main .page a:hover  { color: var(--c-accent); transform: scale(110%); }
-main .page a:active { color: var(--c-light);  transform: scale(115%); }
+main .page a:hover  { color: var(--c-light ); transform: scale(110%); }
+main .page a:active { color: var(--c-accent); transform: scale(115%); }
 
 main hr { background-color: var(--c-accent-l-a4); }
