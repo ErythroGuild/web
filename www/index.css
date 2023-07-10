@@ -25,8 +25,8 @@ b.guild { font-size: 1.25em; }
 	--s-cupcake: 3.2rem;
 
 	position: relative;
-	margin: -3.8rem 1.4rem 2.6rem 2.2rem;
-	padding: 0.3rem 1.2rem 0.65rem;
+	margin: -3.8rem 1.4rem 2.2rem 2.2rem;
+	padding: 0.4rem 1.5rem 0.85rem 1.3rem;
 	border-radius: 0.6rem;
 	
 	background-color: var(--c-dark-d-a8);

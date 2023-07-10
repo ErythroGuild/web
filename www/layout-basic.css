@@ -37,7 +37,7 @@ footer {
 	--s-connection: 2.4rem;
 
 	display: flex;
-	margin-top: 0.8rem;
+	margin-top: 2.2rem;
 }
 @media (orientation: landscape) {
 	footer {
