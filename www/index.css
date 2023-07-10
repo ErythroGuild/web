@@ -91,3 +91,5 @@ main .page a {
 }
 main .page a:hover  { color: var(--c-accent); transform: scale(110%); }
 main .page a:active { color: var(--c-light);  transform: scale(115%); }
+
+main hr { background-color: var(--c-accent-l-a4); }
