@@ -45,6 +45,13 @@
 	--f-crimson: 'Crimson Pro', Garamond, serif;
 	--f-rubik:   'Rubik', Helvetica, sans-serif;
 	--f-fira:    'Fira Code', 'Cascadia Code', Consolas, monospace;
+
+	--t-fade-s: 0.42s;
+	--t-fade:   0.14s;
+	--t-fade-f: 0.06s;
+	--t-scale-s: 0.56s;
+	--t-scale:   0.24s;
+	--t-scale-f: 0.08s;
 }
 
 /* Styles organized by role, based on MDN's classifications: */

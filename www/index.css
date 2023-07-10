@@ -30,12 +30,12 @@ b.guild { font-size: 1.25em; }
 	border-radius: 0.6rem;
 	
 	background-color: var(--c-dark-d-a8);
-	transition: background-color 0.28s ease-out;
+	transition: background-color var(--t-fade-s) ease-in-out;
 	
 	font-family: var(--f-rubik);
 	letter-spacing: 0.06ex;
 }
-.intro b.guild { transition: color 1.4s ease-out; }
+.intro b.guild { transition: color var(--t-fade-s) ease-in-out; }
 .intro .nowrap {
 	display: inline-block;
 	white-space: nowrap;
@@ -51,7 +51,7 @@ b.guild { font-size: 1.25em; }
 	height: var(--s-cupcake);
 	width:  var(--s-cupcake);
 
-	transition: transform 0.24s ease-in-out;
+	transition: transform var(--t-scale) ease-in-out;
 }
 .intro .cupcake > img:hover { transform: scale(160%) rotate(6deg); }
 @media (prefers-reduced-motion) {
@@ -86,8 +86,8 @@ main .page a {
 	/* intentionally hiding "visited" color for main page */
 	color: var(--c-accent-l);
 	transition:
-		color 0.14s ease-out,
-		transform 0.14s ease-out;
+		color     var(--t-scale-f) ease-out,
+		transform var(--t-scale-f) ease-out;
 }
 main .page a:hover  { color: var(--c-light ); transform: scale(110%); }
 main .page a:active { color: var(--c-accent); transform: scale(115%); }
