@@ -35,13 +35,13 @@ b.guild { font-size: 1.25em; }
 	font-family: var(--f-rubik);
 	letter-spacing: 0.06ex;
 }
-.intro b.guild { transition: color var(--t-fade-s) ease-in-out; }
+.intro .highlight { transition: color var(--t-fade-s) ease-in-out; }
 .intro .nowrap {
 	display: inline-block;
 	white-space: nowrap;
 }
 .intro:hover { background-color: var(--c-dark-d); }
-.intro:hover b.guild { color: var(--c-accent-l); }
+.intro:hover .highlight { color: var(--c-accent-l); }
 
 .intro .nowrap.cupcake { margin-right: var(--s-cupcake); }
 .intro .cupcake > img {
