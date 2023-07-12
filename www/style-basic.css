@@ -1,3 +1,46 @@
+/* Standard attribute groups & order */
+/*	{
+/*		--custom-variables
+/*	
+/*		z-index
+/*		display
+/*		height/width
+/*		position
+/*		left/right/top/bottom
+/*		transform
+/*		margin
+/*		padding
+/*		border
+/*		border-radius
+/*		pointer
+/*	
+/*		flex-flow
+/*		justify-content
+/*		align-items
+/*		align-content
+/*		gap
+/*	
+/*		order
+/*		flex
+/*		align-self
+/*	
+/*		color
+/*		accent-color
+/*		background-color
+/*	
+/*		font-family
+/*		font-weight
+/*		font-size
+/*		text-decoration
+/*		letter-spacing
+/*	
+/*		fill
+/*		stroke
+/*		stroke-width
+/*		stroke-linecap
+/*	}
+*/
+
 /*----------------------*/
 /* Variable Definitions */
 /*----------------------*/
