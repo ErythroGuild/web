@@ -4,6 +4,113 @@
 /* Header */
 /*--------*/
 
+/* Account pill */
+
+#account-pill {
+	--s-pill-height: 1.2rem;
+
+	z-index: 0; /* start a stacking context for entire pill */
+	display: inline-flex;
+	position: relative; /* allow logout sheet to align here */
+
+	flex-flow: column nowrap;
+}
+
+#account-pill-badge {
+	display: inline-flex;
+	padding-right: 0.55rem;
+	border-radius: var(--s-pill-height);
+	cursor: pointer;
+
+	flex-flow: row nowrap;
+	align-items: center;
+	gap: 0.48rem;
+
+	background-color: var(--c-light-d);
+}
+#account-pill-badge > .badge-icon {
+	--s-icon: calc(2 * var(--s-pill-height));
+
+	height: var(--s-icon);
+	width:  var(--s-icon);
+	box-sizing: border-box;
+	border: 0.36rem solid var(--c-accent-l);
+	border-radius: var(--s-pill-height);
+}
+#account-pill-badge > .badge-name {
+	margin-left: -0.08rem;
+	margin-top: -0.06rem;
+	min-width: 3.6rem; /* make sure logout sheet isn't squished */
+
+	color: var(--c-dark-l);
+	font-weight: 600;
+	font-size: 1.25rem;
+}
+#account-pill-badge > .badge-arrow {
+	width: 0.8rem;
+	fill: var(--c-dark-l-a8); /* looks more optically balanced with alpha */
+}
+#account-pill.account-guest .badge-arrow { transform: rotate(-90deg); }
+#account-pill-badge { transition: background-color var(--t-fade) ease-out; }
+#account-pill-badge:hover  { background-color: var(--c-accent-l); }
+#account-pill-badge:active { background-color: var(--c-accent  ); }
+
+#account-pill-logout {
+	z-index: -1;
+	display: inline-flex;
+	width: 100%;
+	position: absolute;
+	top: 0; bottom: 0;
+	border-radius: var(--s-pill-height);
+
+	padding-top   : 0.4rem; /* this gets animated to show dropdown */
+	padding-bottom: 0.8rem;
+	transition: padding-top var(--t-scale) ease-out;
+
+	flex-flow: column nowrap;
+	justify-content: end;
+	align-items: center;
+
+	background-color: var(--c-dark-d-a8);
+}
+#account-pill-logout.pill-open { padding-top: 4.4rem; }
+#account-pill-logout > .logout-button {
+	display: inline-flex;
+	cursor: pointer;
+
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	column-gap: 0.6rem;
+
+	transition: color var(--t-fade) ease-out;
+}
+#account-pill-logout > .logout-button:hover  { color: var(--c-accent-l); }
+#account-pill-logout > .logout-button:active { color: var(--c-accent  ); }
+#account-pill-logout svg {
+	overflow: visible;
+	height: 1.2rem;
+
+	fill: none;
+	stroke: var(--c-light);
+	stroke-width: 12;
+	stroke-linecap: round;
+}
+#account-pill-logout #logout-arrow {
+	transition:
+		transform var(--t-scale-f) ease-out,
+		stroke var(--t-fade) ease-out;
+}
+#account-pill-logout > .logout-button:hover #logout-arrow {
+	transform: translateX(0.6rem);
+	stroke: var(--c-accent);
+}
+#account-pill-logout > .logout-button:active #logout-arrow {
+	transform: translateX(1.6rem);
+}
+
+
+
 /*------*/
 /* Body */
 /*------*/
@@ -15,7 +122,10 @@ html {
 	justify-content: center;
 }
 
-body { margin: 2rem auto 3rem; }
+body {
+	position: relative;
+	margin: 2rem auto 3rem;
+}
 @media (orientation: landscape) {
 	body {
 		max-width: 48rem;
