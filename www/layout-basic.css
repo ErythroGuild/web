@@ -177,7 +177,7 @@ footer svg {
 	width:  var(--s-connection);
 	height: var(--s-connection);
 
-	fill: var(--c-light-d);
+	fill: var(--c-light);
 	transition:
 		fill 0.18s ease-out,
 		transform 0.12s ease-out;
