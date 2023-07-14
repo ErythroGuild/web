@@ -5,6 +5,7 @@
 /*		z-index
 /*		display
 /*		overflow
+/*		aspect-ratio
 /*		height/width
 /*		box-sizing
 /*		position
@@ -28,6 +29,7 @@
 /*	
 /*		color
 /*		accent-color
+/*		background
 /*		background-color
 /*	
 /*		font-family
@@ -35,6 +37,11 @@
 /*		font-size
 /*		text-decoration
 /*		letter-spacing
+/*		text-overflow
+/*		overflow-wrap
+/*		word-break
+/*		hyphens
+/*		white-space
 /*	
 /*		fill
 /*		stroke
