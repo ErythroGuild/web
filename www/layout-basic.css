@@ -34,6 +34,8 @@
 	box-sizing: border-box;
 	border: 0.36rem solid var(--c-accent-l);
 	border-radius: var(--s-pill-height);
+
+	background-color: var(--c-dark-d);
 }
 #account-pill-badge > .badge-name {
 	margin-left: -0.08rem;
