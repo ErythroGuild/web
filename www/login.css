@@ -1,0 +1,128 @@
+@import "style-basic.css" layer(style-basic);
+@import "layout-basic.css" layer(layout-basic);
+
+main {
+	display: flex;
+	
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
+/* Embed displaying user's Discord info. */
+
+.discord-embed {
+	--s-banner-width: 16rem;
+	--s-banner-corner: calc(var(--s-pfp)/6);
+	--s-pfp: 5rem;
+
+	position: relative; /* allows children to use absolute positioning */
+	height: calc(3/8 * var(--s-banner-width) + var(--s-pfp) / 2);
+	width: var(--s-banner-width);
+}
+#discord-banner {
+	aspect-ratio: 8 / 3;
+	width: var(--s-banner-width);
+	box-sizing: border-box;
+	border: 0.4rem solid var(--c-dark-d);
+	border-radius: var(--s-banner-corner);
+}
+#discord-pfp {
+	height: var(--s-pfp); width: var(--s-pfp);
+	box-sizing: border-box;
+	position: absolute;
+	left: calc(0.25 * var(--s-pfp));
+	bottom: 0;
+	border: 0.4rem solid var(--c-dark-d);
+	border-radius: var(--s-pfp);
+
+	background-color: var(--c-dark-d);
+}
+
+.discord-username {
+	display: flex;
+	position: absolute;
+	bottom: calc(0.08 * var(--s-pfp));
+	right: calc(0.25 * var(--s-pfp));
+	height: calc(0.75 * var(--s-pfp));
+	width: calc(0.5 * var(--s-banner-width));
+	box-sizing: border-box;
+	padding: 0 0.8rem;
+	border-radius: var(--s-banner-corner);
+	background-color: var(--c-dark-d);
+
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-content: center;
+	gap: 0.15rem;
+}
+#discord-displayname, #discord-handle {
+	overflow: clip;
+	margin: 0;
+	border: none;
+	padding: 0;
+	
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+#discord-displayname {
+	font-weight: 600;
+	font-size: 1.05rem;
+}
+#discord-handle {
+	color: var(--c-light-a6);
+	font-size: 0.85rem;
+}
+
+/* Error message. */
+
+.error-text {
+	max-width: 24rem;
+	margin: 2rem 0 2.2rem;
+	padding: 0.8rem 1.4rem 1.2rem;
+
+	background-color: var(--c-dark-d-a6);
+	font-size: 1.15rem;
+}
+
+/* Action buttons. */
+
+.error-actions {
+	display: inline-flex;
+
+	flex-flow: row nowrap;
+	align-items: center;
+	gap: 2.2rem;
+}
+
+.error-actions > a {
+	--s-button-height: 1.6rem;
+
+	display: inline-flex;
+	padding: 0.2rem 1.2rem 0.35rem 0.8rem;
+	border-radius: var(--s-button-height);
+	cursor: pointer;
+
+	flex-flow: row nowrap;
+	align-items: center;
+	gap: 0.6rem;
+
+	background-color: var(--c-accent-d);
+	transition: background-color var(--t-fade) ease-out;
+
+	font-weight: 600;
+	font-size: 1.25rem;
+	text-decoration: none;
+
+}
+.error-actions > a, .error-actions > a:visited { color: var(--c-light); }
+.error-actions > a:hover  { background-color: var(--c-accent); }
+.error-actions > a:active { background-color: var(--c-dark-l); }
+
+.error-actions > a svg {
+	width: var(--s-button-height);
+	height: var(--s-button-height);
+
+	fill: var(--c-light);
+}
+/* back icon has more whitespace; adjust discord icon to balance */
+.error-actions > a#error-action-join svg { margin: 0 0.35rem; }
