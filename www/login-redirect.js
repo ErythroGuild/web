@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 	// Log in and fetch a valid token.
 	// (Actually populating the rest of the data happens on page load.)
-	const endpoint = "https://api.erythro.org/irene/web-auth/login";
+	const endpoint = "https://api.erythro.org/irene/web-auth/log-in";
 	const oauthCode = responseDiscord.get("code");
 	const request = new Request(endpoint, {
 		method: "POST",
